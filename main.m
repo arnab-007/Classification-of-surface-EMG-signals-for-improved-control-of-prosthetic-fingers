@@ -10,7 +10,7 @@ fs = 4000;
 win_size = 20000;%400;%0.5*fs;% 800;
 win_inc = win_size; % training data has 50% overlap between windowsz
 
-disp('calculating trainning feature...');
+disp('Calculating training features...');
 for i =1:length(train_data)
     feature1(i,:) = [getrmsfeat(train_data{i}(:,1),win_size,win_inc)', getrmsfeat(train_data{i}(:,2),win_size,win_inc)'];
 
@@ -73,7 +73,7 @@ feature7_test = norm_feature(feature7_test);
 %}
 feature_test = [feature1_test feature2_test feature3_test feature4_test feature5_test feature6_test feature7_test];
 %
-disp('calculating trainning moments...');
+disp('Calculating training moments...');
 c=1;
 for i = 1:length(test_data)
 for k=1:8
@@ -81,7 +81,7 @@ feat_mom_test{k}(c,:)= [getmoment(test_data{i}(:,1),win_size,win_inc,k+2)', getm
 end
 c=c+1;
 end
-disp('calculating testing momnets...');
+disp('Calculating testing moments...');
 c=1;
 for i=1:length(train_data)
 for k=1:8
