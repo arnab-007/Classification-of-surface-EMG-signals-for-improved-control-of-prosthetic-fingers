@@ -1,1 +1,1 @@
-# Towards-improved-classification-of-surface-EMG-signals-for-efficient-control-of-prosthetic-fingters
+# Towards-improved-and-efficient-control-of-prosthetic-fingters
